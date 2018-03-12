@@ -1,0 +1,145 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Binary Bridge "
+      },
+      "geometry": {
+        "coordinates": [
+          -84.396873,
+          33.777243
+        ],
+        "type": "Point"
+      },
+      "id": "250a14615b5dc37f8a1595ca0ccf0981"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stadium"
+      },
+      "geometry": {
+        "coordinates": [
+          -84.393321,
+          33.773841
+        ],
+        "type": "Point"
+      },
+      "id": "547ce044e96f8adda564ed57ec121751"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "CRC"
+      },
+      "geometry": {
+        "coordinates": [
+          -84.402912,
+          33.775688
+        ],
+        "type": "Point"
+      },
+      "id": "6239adf06a9e8dd9618a7015204a9b92"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tile": "Einstein Statue"
+      },
+      "geometry": {
+        "coordinates": [
+          -84.398215,
+          33.774759
+        ],
+        "type": "Point"
+      },
+      "id": "6b1ce860c143bfe68648a459c6102842"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Campanile"
+      },
+      "geometry": {
+        "coordinates": [
+          -84.398287,
+          33.774409
+        ],
+        "type": "Point"
+      },
+      "id": "ab12f62ace9affd197b1f12ef1fec1ee"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Tech Green "
+      },
+      "geometry": {
+        "coordinates": [
+          -84.397324,
+          33.774693
+        ],
+        "type": "Point"
+      },
+      "id": "ae79b6c630db6d8f9cddaf9a00b1bf65"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Ice Cream statue"
+      },
+      "geometry": {
+        "coordinates": [
+          -84.399223,
+          33.774639
+        ],
+        "type": "Point"
+      },
+      "id": "c9cc1f5963209bdd23acdf9c334e1dfe"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Tech Tower "
+      },
+      "geometry": {
+        "coordinates": [
+          -84.395053,
+          33.772478
+        ],
+        "type": "Point"
+      },
+      "id": "ca5c5281a1a5ab605fd4b5205719a54a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Burger Bowl"
+      },
+      "geometry": {
+        "coordinates": [
+          -84.403064,
+          33.777894
+        ],
+        "type": "Point"
+      },
+      "id": "debe6b96cc87a04da3dffeeb6c9e32e6"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "West Village"
+      },
+      "geometry": {
+        "coordinates": [
+          -84.404625,
+          33.779025
+        ],
+        "type": "Point"
+      },
+      "id": "ee2f275eed966bf8484f5fc539667b76"
+    }
+  ],
+  "type": "FeatureCollection"
+}
