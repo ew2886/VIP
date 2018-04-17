@@ -159,7 +159,8 @@
 	<script>
 	 var aframeContent1 = '<a-scene vr-mode-ui="enabled: false" background="color: #24CAFF"><a-assets><a-asset-item id="tree" src="./assets/models/tree1/tree1.dae"></a-asset-item></a-assets><a-entity><a-animation attribute="position" from="0 5 0" to="0 0 0" dur="4000" easing="ease-out"></a-animation><a-entity position="0 880 1290" rotation="-34 0 0"><a-camera id="camera" near="1000" far="4000" fov="2.2" wasd-controls-enabled="false" look-controls-enabled="false"></a-camera></a-entity></a-entity><a-entity id="logo" rotation="0 45 0"><a-entity rotation="-20 0 0" position="0 0 10.75" scale="1 0 1"><a-animation attribute="scale" to="1 1 1" delay="200" dur="1000" easing="ease-out"></a-animation><a-box width="12.5" depth="1" height="30" color="#EF2D5E" position="0 15 0"><a-entity rotation="-140 0 0" position="0 15 0" scale="1 0 1"><a-animation attribute="scale" to="1 1 1" delay="800" dur="800" easing="ease-out"></a-animation><a-box width="12.49" depth=".1" height="30" color="#24CAFF" position="0 15 -.52" shader="flat"></a-box><a-box width="12.5" depth="1" height="30" color="#EF2D5E" position="0 15 0"></a-box></a-entity></a-box></a-entity><a-entity rotation="-90 0 0" position="0 8 7.5" scale="1 0 1"><a-animation attribute="scale" to="1 1 1" delay="800" dur="600" easing="ease-out"></a-animation><a-box width="12.45" depth=".1" height="14" color="#F2E646" position="0 7 .52" shader="flat"></a-box><a-box width="12.5" depth="1" height="14" color="#EF2D5E" position="0 7 0"></a-box></a-entity><a-entity><a-box color="white" opacity="0.25" width="18" depth="28" height="6"><a-animation attribute="position" from="-280 240 180" to="-280 240 340" delay="0" dur="36000" easing="linear" repeat="indefinite" fill="both"></a-animation></a-box><a-box color="white" opacity="0.65" width="8" depth="12" height="4"><a-animation attribute="position" from="5 32 -80" to="5 32 120" delay="12000" dur="48000" easing="linear" repeat="indefinite" fill="both"></a-animation></a-box><a-box color="white" opacity="0.75" width="6" depth="9" height="4" visible="false"><a-animation attribute="position" from="10 12 -10" to="10 12 100" delay="1000" dur="36000" easing="linear" repeat="indefinite" fill="both"></a-animation><a-animation attribute="visible" to="true" delay="1000" dur="1"></a-animation></a-box><a-box color="white" opacity="0.5" width="8" depth="12" height="3"><a-animation attribute="position" from="20 16 -80" to="20 16 120" delay="200" dur="52000" easing="linear" repeat="indefinite" fill="both"></a-animation></a-box><a-box color="white" opacity="0.8" width="8" depth="12" height="3"><a-animation attribute="position" from="-20 18 -50" to="-20 18 120" delay="200" dur="50000" easing="linear" repeat="indefinite" fill="both"></a-animation></a-box><a-box color="white" opacity="0.75" width="5" depth="7" height="3"><a-animation attribute="position" from="26 20 -80" to="26 20 120" delay="20000" dur="48000" easing="linear" repeat="indefinite" fill="both"></a-animation></a-box></a-entity><a-entity rotation="-90 0 0"><a-plane width="12.5" height="20" position="0 0 0.1" pivot="0 -10 0" color="#21897C"><a-animation attribute="scale" from="1 0 1" to="1 1 1" easing="ease-out" delay="600" dur="1000" fill="both"></a-animation></a-plane></a-entity><a-entity><a-plane width="30" height="30" color="#249889" rotation="-90 0 0"><a-animation attribute="position" from="0 -40 0" to="0 0 0" dur="1600" easing="ease-out"></a-animation></a-plane></a-entity><a-entity position="-10 0.2 -10"><a-collada-model src="#tree" scale="2.5 2.5 2.5" visible="false"><a-animation attribute="position" from="0 10 0" to="0 0 0" delay="650" dur="800" easing="ease-out" fill="backwards"></a-animation><a-animation attribute="visible" to="true" delay="800" dur="1"></a-animation></a-collada-model></a-entity><a-entity position="-10 0.2 6"><a-collada-model src="#tree" scale="2.5 2.5 2.5" visible="false"><a-animation attribute="position" from="0 10 0" to="0 0 0" delay="400" dur="800" easing="ease-out" fill="backwards"></a-animation><a-animation attribute="visible" to="true" delay="400" dur="1"></a-animation></a-collada-model></a-entity><a-entity position="10 0.2 10"><a-collada-model src="#tree" scale="2.5 2.5 2.5" visible="false"><a-animation attribute="position" from="0 10 0" to="0 0 0" delay="600" dur="800" easing="ease-out" fill="backwards"></a-animation><a-animation attribute="visible" to="true" delay="600" dur="1"></a-animation></a-collada-model></a-entity></a-entity><a-light type="directional" color="#FFF" intensity="0.45" position="4 2 1"></a-light><a-light type="ambient" color="#A8A8A8"></a-light></a-scene>';
 
-	 var aframeContent2 ='<a-scene><a-entity id="diorama" position="0 0 -2" scale="1 1 1" visible="true"><a-entity position="0.231 0.425 -0.05" scale="0.094 0.943 0.132" id="letterT" geometry="" material="color:#35a3dd"></a-entity><a-entity position="0.7896769035302426 0.425 -0.05" scale="0.094 0.943 0.132" id="obscure" geometry="" material="color:#94eba3"></a-entity><a-entity position="-0.008 0.652 -0.415" scale="0.094 0.943 0.132" id="obscure-2" geometry="" material="color:#94eba3"></a-entity><a-entity position="0.722 0.193 -2.0266582853322728" scale="0.094 1.029 0.102" id="obscure-3" geometry="" material="color:#94eba3"></a-entity><a-entity position="-0.378 0.575 -1.227" scale="0.094 1.029 0.102" id="obscure-4" geometry="" material="color:#94eba3"></a-entity><a-entity position="-0.616 0.853552311338228 0.833265256420476" rotation="-86.975 135.79100000000003 -134.70200000000003" scale="0.213 1.111 0.205" id="letterT-2" geometry="" material="color:#35a3dd"></a-entity><a-entity position="1.006 0.501 -1.311" scale="0.067 0.621 0.104" id="letterH" geometry="" material="color:#35a3dd"></a-entity><a-entity position="-0.341 0.38778766610092774 -0.8427911671761813" scale="0.127233024397624 0.928 0.132" id="letterH-2" geometry="" material="color:#35a3dd"></a-entity><a-entity position="0.7218882141950878 0.4710719316162546 -1.2957703273192727" rotation="89.553 180.023 180.023" scale="-0.082 0.431 0.096" id="letterH-3" geometry="" material="color:#35a3dd"></a-entity><a-entity position="-0.831 0.333 -0.814" scale="0.108 1.063 0.189" id="letterE" geometry="" material="color:#35a3dd"></a-entity><a-entity position="0.835 0.749 -1.866" rotation="89.095 0 0" scale="0.074 0.277 0.085" id="letterE-2" geometry="" material="color:#35a3dd"></a-entity><a-entity position="-0.011 0.058 -1.427" rotation="89.095 0 0" scale="0.124 0.409 0.132" id="letterE-3" geometry="" material="color:#35a3dd"></a-entity><a-entity position="0.489 0.464 -1.662" rotation="89.095 0 0" scale="0.094 0.328 0.095" id="letterE-4" geometry="" material="color:#35a3dd"></a-entity><a-entity position="1.958 0.464 -1.9093054087991976" rotation="89.095 0 0" scale="0.049 0.12493129180562458 0.05" id="obscurity" geometry="" material="color:#bbf7bc"></a-entity></a-entity></a-scene>';
+	 var aframeContent2 ='<a-scene><a-entity reticle geometry="primitive: ring; radiusInner: 0.04; radiusOuter: 0.05"
+   material="color: #aaaaaa"></a-entity><a-entity id="diorama" position="0 0 -2" scale="1 1 1" visible="false"><a-entity position="0.231 0.425 -0.05" scale="0.094 0.943 0.132" id="letterT" geometry="" material="color:#35a3dd"></a-entity><a-entity position="0.7896769035302426 0.425 -0.05" scale="0.094 0.943 0.132" id="obscure" geometry="" material="color:#94eba3"></a-entity><a-entity position="-0.008 0.652 -0.415" scale="0.094 0.943 0.132" id="obscure-2" geometry="" material="color:#94eba3"></a-entity><a-entity position="0.722 0.193 -2.0266582853322728" scale="0.094 1.029 0.102" id="obscure-3" geometry="" material="color:#94eba3"></a-entity><a-entity position="-0.378 0.575 -1.227" scale="0.094 1.029 0.102" id="obscure-4" geometry="" material="color:#94eba3"></a-entity><a-entity position="-0.616 0.853552311338228 0.833265256420476" rotation="-86.975 135.79100000000003 -134.70200000000003" scale="0.213 1.111 0.205" id="letterT-2" geometry="" material="color:#35a3dd"></a-entity><a-entity position="1.006 0.501 -1.311" scale="0.067 0.621 0.104" id="letterH" geometry="" material="color:#35a3dd"></a-entity><a-entity position="-0.341 0.38778766610092774 -0.8427911671761813" scale="0.127233024397624 0.928 0.132" id="letterH-2" geometry="" material="color:#35a3dd"></a-entity><a-entity position="0.7218882141950878 0.4710719316162546 -1.2957703273192727" rotation="89.553 180.023 180.023" scale="-0.082 0.431 0.096" id="letterH-3" geometry="" material="color:#35a3dd"></a-entity><a-entity position="-0.831 0.333 -0.814" scale="0.108 1.063 0.189" id="letterE" geometry="" material="color:#35a3dd"></a-entity><a-entity position="0.835 0.749 -1.866" rotation="89.095 0 0" scale="0.074 0.277 0.085" id="letterE-2" geometry="" material="color:#35a3dd"></a-entity><a-entity position="-0.011 0.058 -1.427" rotation="89.095 0 0" scale="0.124 0.409 0.132" id="letterE-3" geometry="" material="color:#35a3dd"></a-entity><a-entity position="0.489 0.464 -1.662" rotation="89.095 0 0" scale="0.094 0.328 0.095" id="letterE-4" geometry="" material="color:#35a3dd"></a-entity><a-entity position="1.958 0.464 -1.9093054087991976" rotation="89.095 0 0" scale="0.049 0.12493129180562458 0.05" id="obscurity" geometry="" material="color:#bbf7bc"></a-entity></a-entity></a-scene>';
 
 	 function setAframe (myContent) {
 		document.getElementById('aframeContent').innerHTML = myContent;
@@ -182,152 +183,29 @@
 
 
 	</script>
-    <script>
 
-    var places = {
-        "type" : "FeatureCollection",
-        "features": [
-          {
-            "type": "Feature",
-            "properties": {
-              "title": "Binary Bridge "
-            },
-            "geometry": {
-              "coordinates": [
-                -84.396873,
-                33.777243
-              ],
-              "type": "Point"
-            },
-            "id": "250a14615b5dc37f8a1595ca0ccf0981"
-          },
-          {
-            "type": "Feature",
-            "properties": {
-              "title": "Stadium"
-            },
-            "geometry": {
-              "coordinates": [
-                -84.393321,
-                33.773841
-              ],
-              "type": "Point"
-            },
-            "id": "547ce044e96f8adda564ed57ec121751"
-          },
-          {
-            "type": "Feature",
-            "properties": {
-              "title": "CRC"
-            },
-            "geometry": {
-              "coordinates": [
-                -84.402912,
-                33.775688
-              ],
-              "type": "Point"
-            },
-            "id": "6239adf06a9e8dd9618a7015204a9b92"
-          },
-          {
-            "type": "Feature",
-            "properties": {
-              "tile": "Einstein Statue"
-            },
-            "geometry": {
-              "coordinates": [
-                -84.398215,
-                33.774759
-              ],
-              "type": "Point"
-            },
-            "id": "6b1ce860c143bfe68648a459c6102842"
-          },
-          {
-            "type": "Feature",
-            "properties": {
-              "title": "Campanile"
-            },
-            "geometry": {
-              "coordinates": [
-                -84.398287,
-                33.774409
-              ],
-              "type": "Point"
-            },
-            "id": "ab12f62ace9affd197b1f12ef1fec1ee"
-          },
-          {
-            "type": "Feature",
-            "properties": {
-              "title": "Tech Green "
-            },
-            "geometry": {
-              "coordinates": [
-                -84.397324,
-                33.774693
-              ],
-              "type": "Point"
-            },
-            "id": "ae79b6c630db6d8f9cddaf9a00b1bf65"
-          },
-          {
-            "type": "Feature",
-            "properties": {
-              "title": "Ice Cream statue"
-            },
-            "geometry": {
-              "coordinates": [
-                -84.399223,
-                33.774639
-              ],
-              "type": "Point"
-            },
-            "id": "c9cc1f5963209bdd23acdf9c334e1dfe"
-          },
-          {
-            "type": "Feature",
-            "properties": {
-              "title": "Tech Tower "
-            },
-            "geometry": {
-              "coordinates": [
-                -84.395053,
-                33.772478
-              ],
-              "type": "Point"
-            },
-            "id": "ca5c5281a1a5ab605fd4b5205719a54a"
-          },
-          {
-            "type": "Feature",
-            "properties": {
-              "title": "Burger Bowl"
-            },
-            "geometry": {
-              "coordinates": [
-                -84.403064,
-                33.777894
-              ],
-              "type": "Point"
-            },
-            "id": "debe6b96cc87a04da3dffeeb6c9e32e6"
-          },
-          {
-            "type": "Feature",
-            "properties": {
-              "title": "West Village"
-            },
-            "geometry": {
-              "coordinates": [
-                -84.404625,
-                33.779025
-              ],
-              "type": "Point"
-            }
-        }]
-    };
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.1/mapbox-gl-geocoder.min.js'></script>
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.1/mapbox-gl-geocoder.css' type='text/css' />
 
+  <style type='text/css'>
+      #info {
+        margin-top: 100px;
+          display: block;
+          position: relative;
+          /*margin: 0px auto;*/
+          width: 50%;
+          padding: 10px;
+          border: none;
+          border-radius: 3px;
+          font-size: 12px;
+          text-align: center:center;color: #222;
+          background: #fff;
+      }
+  </style>
+  <pre id='info'></pre>
+
+
+  <script>
     (function() {
         'use strict';
 
@@ -338,8 +216,8 @@
         } else {
             renderMapboxJS();
         }
-
         function renderMapboxGL(options) {
+
             mapboxgl.accessToken = 'pk.eyJ1IjoiZXcyODg2IiwiYSI6ImNqZHJ0bW5rMjJncmMycXAwYnlmbmY1em8ifQ.rrPgpT57YwiCAEdDj7spZw';
             mapboxgl.config.API_URL = 'https://api.mapbox.com';
 
@@ -352,8 +230,26 @@
               scrollZoom: true
             }).addControl(new mapboxgl.NavigationControl(), 'top-left');
 
+            var geocoder = new MapboxGeocoder({
+                accessToken: mapboxgl.accessToken
+            });
+
+            window.map.addControl(geocoder);
+
+            window.map.addControl(new mapboxgl.GeolocateControl({
+                positionOptions: {
+                    enableHighAccuracy: true
+                },
+                trackUserLocation: true
+            }));
+
             window.map.on('load', function() {
               console.log('in load function');
+
+              geocoder.on('result', function(e) {
+                window.map.getSource('sinle-point').setData(e.result.geometry);
+              });
+
               window.map.addLayer({
                     "id" : "places",
                     "type" : "symbol",
@@ -516,53 +412,33 @@
             });
         });
 
-            // places.features.forEach(function(marker) {
-            //     // create a HTML element for each feature
-            //     var el = document.createElement('div');
-            //     el.className = 'marker';
-            //     console.log(marker.properties.title);
-            //
-            //     // make a marker for each feature and add to the map
-            //     new mapboxgl.Marker(el)
-            //     .setLngLat(marker.geometry.coordinates)
-            //     .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-            //     .setHTML('<h3>' + marker.properties.title + '</h3>'))
-            //     .addTo(window.map);
-            // });
+        window.map.on('click', 'places', function(e) {
+          console.log('clicked');
+          console.log(e);
 
-            window.map.on('click', 'places', function(e) {
-              console.log('clicked');
-              console.log(e);
+          var coordinates = e.features[0].geometry.coordinates.slice();
+          var title = e.features[0].properties.title;
 
-              var coordinates = e.features[0].geometry.coordinates.slice();
-              var title = e.features[0].properties.title;
+          // Ensure that if the map is zoomed out such that multiple
+          // copies of the feature are visible, the popup appears
+          // over the copy being pointed to.
+          while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+              coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+          }
 
-              // Ensure that if the map is zoomed out such that multiple
-              // copies of the feature are visible, the popup appears
-              // over the copy being pointed to.
-              while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-                  coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-              }
+            new mapboxgl.Popup()
+                .setLngLat(coordinates)
+                .setHTML(title)
+                .addTo(window.map);
 
-                new mapboxgl.Popup()
-                    .setLngLat(coordinates)
-                    .setHTML(title)
-                    .addTo(window.map);
+          if (title === "CRC") {
+            setAframe(aframeContent1);
+          } else if (title === "Burger Bowl") {
+            setAframe(aframeContent2);
+          }
+        });
 
-              if (title === "CRC") {
-                setAframe(aframeContent1);
-              } else if (title === "Burger Bowl") {
-                setAframe(aframeContent2); 
-              }
-            });
-
-            // map.on('click', function(marker) {
-            //
-            //   if (marker.properties.title.equals("CRC")) {
-            //     setAframe(aframeContent1);
-            //   }
-            // });
-        }
+      }
 
         function renderMapboxJS() {
             L.mapbox.accessToken = 'pk.eyJ1IjoiZXcyODg2IiwiYSI6ImNqZHJ0bW5rMjJncmMycXAwYnlmbmY1em8ifQ.rrPgpT57YwiCAEdDj7spZw';
