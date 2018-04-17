@@ -144,26 +144,6 @@
 <meta name="apple-itunes-app" content="app-id=1208400007, app-argument=https://api.mapbox.com/styles/v1/thy3d2ytran/cjdv0f0mr5l1x2slgya5qkda7.html?fresh=true&amp;title=true&amp;access_token=pk.eyJ1IjoidGh5M2QyeXRyYW4iLCJhIjoiY2pkdXpkYW5jMW9wMTJxcGtsdWZkcXd5byJ9.J5xv1hWVoVULYHXx9q-WmQ#16.3/33.773267/-84.396489"></head>
 
 <body>
-  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.1/mapbox-gl-geocoder.min.js'></script>
-  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.1/mapbox-gl-geocoder.css' type='text/css' />
-
-  <style type='text/css'>
-      #info {
-        margin-top: 100px;
-          display: block;
-          position: relative;
-          /*margin: 0px auto;*/
-          width: 50%;
-          padding: 10px;
-          border: none;
-          border-radius: 3px;
-          font-size: 12px;
-          text-align: center:center;color: #222;
-          background: #fff;
-      }
-  </style>
-
-  <pre id='info'></pre>
 	<div id="aframeContent">
 
 	</div>
@@ -202,6 +182,27 @@
 
 
 	</script>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.1/mapbox-gl-geocoder.min.js'></script>
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.1/mapbox-gl-geocoder.css' type='text/css' />
+
+  <style type='text/css'>
+      #info {
+        margin-top: 100px;
+          display: block;
+          position: relative;
+          margin: 0px auto;
+          width: 50%;
+          padding: 10px;
+          border: none;
+          border-radius: 3px;
+          font-size: 12px;
+          text-align: center:center;color: #222;
+          background: #fff;
+      }
+  </style>
+
+  <pre id='info'></pre>
 
   <script>
     (function() {
@@ -439,6 +440,12 @@
             document.getElementById('info').innerHTML =
             JSON.stringify(e.point) + '<br/>' +
             JSON.stringify(e.lngLat);
+
+            if (e.lngLat.lng >= -84.404 && e.lngLat.lng <= -84.402) {
+              if (e.lngLat.lat >= 33.776 && e.lngLat.lat <= 33.778) {
+                setAframe(aframeContent2);
+              }
+            }
         });
 
       }
