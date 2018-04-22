@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>A-Frame / WebXR / AR / Light</title>
+    <meta name="description" content="A-Frame WebAR Light">
+    <script src='aframe-master.js'></script>
+    <script src='aframe-xr.js'></script>
+    <!-- From Don McCurdy’s aframe-extras package https://github.com/donmccurdy/aframe-extras -->
+    <script src='animation-mixer.js'></script>
+  </head>
+  <body>
+    <a-scene>
+    <!--will become a cursor finder so that it'll upload the reticle when Aframe finds a cursor -->
+      <a-entity reticle geometry="primitive: ring; radiusInner: 0.04; radiusOuter: 0.05"
+      material="color: #aaaaaa"></a-entity>
+      <!--after finidng the surface, A-Frame will place the diorama on the surface -->
+      <a-entity id="diorama" position="0 6.0 1" scale="1 1 1" visible="false">
+        <a-entity position="-4.739 2.7623163998158438 6.067" rotation="0 43.258 0" scale="-0.316 2.439 0.599" material="color:#aaaa00" geometry="" id="g"></a-entity><a-entity position="-5.606 0.906 2.893" rotation="-1.8909999999999998 0.573 -82.964" scale="-0.397 3.161 0.44377017737572616" material="color:#aaaa00" geometry="" id="g-3"></a-entity><a-entity position="-7.2272956081755275 3.586241228980525 0.3351109523776521" rotation="-1.8909999999999998 0.573 -82.964" scale="-0.511 3.379 0.599" material="color:#aaaa00" geometry="" id="g-4"></a-entity><a-entity position="-5.270909056293638 2.4401926073854683 2.364407596968724" rotation="-1.8909999999999998 0.573 -82.964" scale="-0.401 1.829 0.599" material="color:#aaaa00" geometry="" id="g-5"></a-entity><a-entity position="-2.3500334400674223 2.838799646744194 2.2105212280898376" rotation="-1.8909999999999998 0.573 -82.964" scale="-0.356 1.829 0.599" material="color:#aaaa00" geometry="" id="o-3"></a-entity><a-entity position="-3.854 0.134 -2.441" rotation="-1.8909999999999998 0.573 -82.964" scale="-0.56 1.829 0.599" material="color:#aaaa00" geometry="" id="o-4"></a-entity><a-entity position="0.059 0.418 -2.587" rotation="-1.8909999999999998 0.573 -82.964" scale="-0.5357959525111131 2.127 0.441" material="color:#aaaa00" geometry="" id="o2-3"></a-entity><a-entity position="0.326 2.664 1.481" rotation="-1 0 -85" scale="-0.401 1.829 0.599" material="color:#aaaa00" geometry="" id="o2-4"></a-entity><a-entity position="2.898 2.701 -0.739" rotation="-1.8909999999999998 0.573 -82.964" scale="-0.401 1.829 0.599" material="color:#aaaa00" geometry="" id="d-3"></a-entity><a-entity position="3.335 1.746 2.989" rotation="-1.8909999999999998 0.573 -82.964" scale="-0.286 1.689 0.599" material="color:#aaaa00" geometry="" id="d-4"></a-entity><a-entity position="-6.221 1.128 -0.756" rotation="0 43.258 0" scale="-0.505 2.037 0.599" material="color:#aaaa00" geometry="" id="g-2"></a-entity><a-entity position="-4.515 1.193 -0.988" rotation="0 43.258 0" scale="-0.446 2.412 0.6376173286954676" material="color:#aaaa00" geometry="" id="o"></a-entity><a-entity position="-1.294 2.203 2.699" rotation="0 43.258 0" scale="-0.383 1.83 0.452" material="color:#aaaa00" geometry="" id="o-2"></a-entity><a-entity position="0.5206541119072191 2.528 4.593421752698636" rotation="0 43.258 0" scale="-0.392 1.518 0.5553818727086578" material="color:#aaaa00" geometry="" id="o2"></a-entity><a-entity position="0.7407621820565445 1.4460927743082843 -1.9707277562660241" rotation="0 43.258 0" scale="-0.505 1.9707784791006242 0.824" material="color:#aaaa00" geometry="" id="o2-2"></a-entity><a-entity position="2.461 2.003 0.948" rotation="0 43.258 0" scale="-0.259 1.83 0.599" material="color:#aaaa00" geometry="" id="d"></a-entity><a-entity position="3.926 2.0688444944469895 -4.184" rotation="0 43.258 0" scale="-0.648 4.055 0.641" material="color:#aaaa00" geometry="" id="d-2"></a-entity>
+      </a-entity>
+    </a-scene>
+    <script>
+        this.scene = document.querySelector('a-scene');
+        this.scene.renderer.gammaOutput = true;
+        this.diorama = document.querySelector('#diorama');
+        this.reticle = document.querySelector('[reticle]');
+        this.touched = this.touched.bind(this)
+        this.reticle.addEventListener('touched', this.touched);
+        function touched(){
+          this.reticle.removeEventListener('touched', this.touched);
+          this.diorama.setAttribute('position', this.reticle.getAttribute('position'));
+          var rotationOnClick = Math.atan2( ( this.scene.camera.getWorldPosition().x - this.diorama.getAttribute('position').x ), ( this.scene.camera.getWorldPosition().z - this.diorama.getAttribute('position').z ) );
+          rotationOnClick = THREE.Math.radToDeg(rotationOnClick) - 90;
+          this.diorama.setAttribute('rotation', {y: rotationOnClick});
+          this.reticle.parentNode.removeChild(this.reticle);
+          this.diorama.setAttribute('visible', true);
+        }
+    </script>
+  </body>
+</html>
