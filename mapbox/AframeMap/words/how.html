@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>A-Frame / WebXR / AR / Light</title>
+    <meta name="description" content="A-Frame WebAR Light">
+    <script src='aframe-master.js'></script>
+    <script src='aframe-xr.js'></script>
+    <!-- From Don McCurdy’s aframe-extras package https://github.com/donmccurdy/aframe-extras -->
+    <script src='animation-mixer.js'></script>
+  </head>
+  <body>
+    <a-scene>
+    <!--will become a cursor finder so that it'll upload the reticle when Aframe finds a cursor -->
+      <a-entity reticle geometry="primitive: ring; radiusInner: 0.04; radiusOuter: 0.05"
+      material="color: #aaaaaa"></a-entity>
+      <!--after finidng the surface, A-Frame will place the diorama on the surface -->
+      <a-entity id="diorama" position="0 6.0 1" scale="1 1 1" visible="false">
+        <a-entity position="3.778 1.111 -9.383" scale="0.218 2.572 0.572" material="color:#ff80c0" geometry="" id="h"></a-entity><a-entity position="2.424036216490727 1.458 -12.847" rotation="0 0 89.897" scale="0.167 0.842 0.283" material="color:#ff80c0" geometry="" id="h-3"></a-entity><a-entity position="2.28 1.152 -9.876" scale="0.281 2.349729535935751 0.572" material="color:#ff80c0" geometry="" id="h-2"></a-entity><a-entity position="1.471 0.877 -10.77" scale="0.281 0.948 0.572" material="color:#ff80c0" geometry="" id="o"></a-entity><a-entity position="0.934 0.8914223588174727 -7.061" rotation="0 0 89.267" scale="0.347 1.058 0.572" material="color:#ff80c0" geometry="" id="o-3"></a-entity><a-entity position="1.123 0.6281712613135653 -11.473" rotation="0 0 89.26682448138226" scale="0.2 0.931 0.227" material="color:#ff80c0" geometry="" id="o-4"></a-entity><a-entity position="0.611 0.756 -9.876" scale="0.281 1.058 0.572" material="color:#ff80c0" geometry="" id="o-2"></a-entity><a-entity position="-0.76 0.744 -8.664" scale="0.262 1.422 0.669" material="color:#ff80c0" geometry="" id="w"></a-entity><a-entity position="-1.836 -0.742409040122812 -4.347" rotation="0 0 -89.725" scale="0.577 1.058 0.572" material="color:#ff80c0" geometry="" id="w-4"></a-entity><a-entity position="-1.29 0.483 -10.899" rotation="0 0 -89.725" scale="0.31417751075733186 1.173 0.19" material="color:#ff80c0" geometry="" id="w-5"></a-entity><a-entity position="-1.889 0.25 -7.511" rotation="0 0 -0.115" scale="0.28 1.177 0.6323712263223398" material="color:#ff80c0" geometry="" id="w-2"></a-entity><a-entity position="-2.221 0.737 -9.215" scale="0.248 1.363 0.572" material="color:#ff80c0" geometry="" id="w-3"></a-entity></a-scene>
+      </a-entity>
+    </a-scene>
+    <script>
+        this.scene = document.querySelector('a-scene');
+        this.scene.renderer.gammaOutput = true;
+        this.diorama = document.querySelector('#diorama');
+        this.reticle = document.querySelector('[reticle]');
+        this.touched = this.touched.bind(this)
+        this.reticle.addEventListener('touched', this.touched);
+        function touched(){
+          this.reticle.removeEventListener('touched', this.touched);
+          this.diorama.setAttribute('position', this.reticle.getAttribute('position'));
+          var rotationOnClick = Math.atan2( ( this.scene.camera.getWorldPosition().x - this.diorama.getAttribute('position').x ), ( this.scene.camera.getWorldPosition().z - this.diorama.getAttribute('position').z ) );
+          rotationOnClick = THREE.Math.radToDeg(rotationOnClick) - 90;
+          this.diorama.setAttribute('rotation', {y: rotationOnClick});
+          this.reticle.parentNode.removeChild(this.reticle);
+          this.diorama.setAttribute('visible', true);
+        }
+    </script>
+  </body>
+</html>
